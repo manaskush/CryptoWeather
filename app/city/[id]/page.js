@@ -3,7 +3,7 @@
 import React, { useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { useSelector, useDispatch } from 'react-redux';
-import { fetchWeatherData, fetchWeatherForecast } from '@redux/slices/weatherSlice';
+import { fetchWeatherData, fetchWeatherForecast } from '../../../redux/slices/weatherSlice';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 
 export default function CityDetail({ params }) {
