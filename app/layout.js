@@ -68,8 +68,9 @@ export default function RootLayout({ children }) {
             <footer className="bg-blue-400 border-t border-gray-200 py-6">
               <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <p className="text-center text-xl font-bold text-gray-900">
-                  CryptoWeather Nexus Dashboard || I hope you liked the project 
+                  CryptoWeather Nexus Dashboard || I hope you liked the project ||  made by - Manas Kush || manaskush.vercel.app 
                 </p>
+        
               </div>
             </footer>
           </div>
