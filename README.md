@@ -1,37 +1,81 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# CryptoWeather Nexus
 
-## Getting Started
+## Overview
+CryptoWeather Nexus is a multi-page dashboard that combines real-time weather data, cryptocurrency information, and live notifications via WebSocket. The project was built using modern web technologies and deployed publicly.
 
-First, run the development server:
+## Tech Stack
+- **Framework:** Next.js (v13+)
+- **State Management:** Redux (with Redux Thunk for async logic)
+- **Styling:** Tailwind CSS
+- **Data Fetching:** OpenWeatherMap API, CoinGecko API, NewsData.io
+- **Real-Time Updates:** CoinCap WebSocket for live price updates
+- **Deployment:** Vercel
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Features
+- **Dashboard Page:**
+  - Weather: Temperature, humidity, and conditions for three predefined cities
+  - Cryptocurrency: Live price, 24h change, and market cap for three cryptocurrencies
+  - News: Top five crypto-related headlines
+- **Detail Pages:**
+  - City details: Weather history with charts/tables
+  - Crypto details: Historical pricing and extended metrics
+- **Real-Time Notifications:**
+  - WebSocket-based price alerts for BTC/ETH
+  - Simulated weather alerts
+- **User Preferences:**
+  - Favorite cities and cryptocurrencies stored using Redux state
+  - Persisted across sessions
+- **Responsive UI:**
+  - Adaptable layout from mobile to desktop
+  - Interactive UI with clear hover and focus states
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## How I Built It
+1. **Project Setup:** Initialized a Next.js project and configured Redux for global state management.
+2. **API Integrations:** Implemented API calls for weather, crypto prices, and news using Next.js server-side functions.
+3. **WebSocket Implementation:** Connected to CoinCap WebSocket for real-time crypto price updates.
+4. **State Management:** Used Redux to store API responses, handle loading states, and manage user preferences.
+5. **UI Development:** Designed responsive layouts using Tailwind CSS and created reusable components.
+6. **Error Handling:** Implemented fallback UI for API failures and real-time updates.
+7. **Deployment:** Deployed the app on Vercel and managed API keys securely through environment variables.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Installation & Setup
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/manaskush/CryptoWeather.git
+   cd CryptoWeather
+   ```
+2. Install dependencies:
+   ```sh
+   npm install
+   ```
+3. Set up environment variables in a `.env.local` file:
+   ```sh
+   NEXT_PUBLIC_WEATHER_API_KEY=your_api_key
+   NEXT_PUBLIC_CRYPTO_API_KEY=your_api_key
+   NEXT_PUBLIC_NEWS_API_KEY=your_api_key
+   ```
+4. Run the development server:
+   ```sh
+   npm run dev
+   ```
+5. Build and deploy:
+   ```sh
+   npm run build
+   vercel deploy
+   ```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Live Deployment
+[Live Demo](https://crypto-weather-blond.vercel.app/)
 
-## Learn More
+## Challenges Faced & Solutions
+- **Module Not Found Errors:** Fixed incorrect import paths and ensured all dependencies were installed properly.
+- **WebSocket Integration:** Managed connection lifecycle properly to avoid memory leaks.
+- **Data Sync Issues:** Implemented periodic API calls and handled rate limits gracefully.
+- **UI Responsiveness:** Used Tailwind CSS utility classes to ensure smooth adaptation across devices.
 
-To learn more about Next.js, take a look at the following resources:
+## Repository
+[GitHub Repo](https://github.com/manaskush/CryptoWeather)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+The project is live please check it and thankyou for this opportunity and I would like to express my interest in working with the company Thanks again for reviewing this. 
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-"# CryptoWeather" 
+Manas Kush
