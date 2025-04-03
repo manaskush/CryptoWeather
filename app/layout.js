@@ -32,7 +32,7 @@ export default function RootLayout({ children }) {
         toast.info(lastNotification.message, {
           position: "top-right",
           autoClose: 3000,
-          hideProgressBar: false,
+          hideProgressBar: true,
           closeOnClick: true,
           pauseOnHover: true,
           draggable: true,
