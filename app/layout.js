@@ -56,7 +56,7 @@ export default function RootLayout({ children }) {
               <div className="max-w-7xl  mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between items-center h-16">
                   <div className="  flex-shrink-0 flex items-center">
-                    <h1 className="text-4xl font-bold text-gray-900">CryptoWeather Nexus</h1>
+                    <h1 className="text-3xl font-bold text-gray-900">CryptoWeather Nexus</h1>
                   </div>
                   <NotificationCenter />
                 </div>
